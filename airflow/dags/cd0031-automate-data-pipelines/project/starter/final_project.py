@@ -13,12 +13,17 @@ from udacity.common import final_project_sql_statements
 default_args = {
     'owner': 'udacity',
     'start_date': pendulum.now(),
+    'depends_on_past': False,
+    'email_on_retry': False,
+    'retries': 3,
+    'retry_delay': timedelta(minutes=5),
 }
 
 @dag(
     default_args=default_args,
     description='Load and transform data in Redshift with Airflow',
-    schedule_interval='0 * * * *'
+    schedule_interval='0 * * * *',
+    catchup=False,
 )
 def final_project():
 
@@ -55,5 +60,7 @@ def final_project():
     run_quality_checks = DataQualityOperator(
         task_id='Run_data_quality_checks',
     )
+
+    
 
 final_project_dag = final_project()
