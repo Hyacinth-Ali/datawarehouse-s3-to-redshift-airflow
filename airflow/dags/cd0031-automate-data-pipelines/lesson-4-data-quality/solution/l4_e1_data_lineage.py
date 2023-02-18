@@ -12,7 +12,7 @@ from udacity.common import sql_statements
     start_date=pendulum.now()
 )
 def data_lineage():
-
+ 
 
     @task()
     def load_trip_data_to_redshift():

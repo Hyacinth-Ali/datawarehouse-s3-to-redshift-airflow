@@ -59,3 +59,6 @@ airflow variables set s3_bucket udacity-ali-m4
 # TO-DO: un-comment the below line:
 #
 airflow variables set s3_prefix data-pipelines
+
+git config --global user.email "hyacinth.ali@mail.mcgill.ca"
+git config --global user.name "Hyacinth Ali"  
