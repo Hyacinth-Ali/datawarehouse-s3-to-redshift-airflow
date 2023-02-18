@@ -40,3 +40,51 @@ class SqlQueries:
                extract(month from start_time), extract(year from start_time), extract(dayofweek from start_time)
         FROM songplays
     """)
+
+    create_staging_events = ("""
+        DROP TABLE IF EXISTS staging_events;
+        CREATE TABLE IF NOT EXISTS staging_events 
+            (
+                artist text, 
+                auth text,
+                firstname text,
+                gender text,
+                iteminsession int4,
+                lastname text,
+                length float,
+                level text,
+                location text,
+                method text,
+                page text,
+                registration float,
+                sessionid int4,
+                song text,
+                status int4,
+                start_time bigint,
+                userAgent text,
+                userId int
+            );
+    """)
+
+    create_staging_songs = ("""
+        DROP TABLE IF EXISTS staging_songs;
+        CREATE TABLE IF NOT EXISTS staging_songs
+            (
+                num_songs int4,
+                artist_id text,
+                artist_latitude float,
+                artist_longitude float,
+                artist_location text,
+                artist_name text,
+                song_id text,
+                title text,
+                duration float,
+                year int
+
+            );
+    """)
+
+
+
+
+
