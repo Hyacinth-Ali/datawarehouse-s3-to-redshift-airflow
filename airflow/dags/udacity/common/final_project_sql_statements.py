@@ -165,6 +165,8 @@ class SqlQueries:
         );
     """)
 
+    check_number_of_rows = "SELECT COUNT(*) FROM {}"
+   
 
 
 

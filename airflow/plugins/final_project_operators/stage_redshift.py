@@ -24,7 +24,6 @@ class StageToRedshiftOperator(BaseOperator):
                  table='',
                  s3_bucket='',
                  s3_key='',
-                 delimiter='',
                  ignore_headers=1,
                  data_format='auto',
                  date_format='auto',
@@ -38,7 +37,6 @@ class StageToRedshiftOperator(BaseOperator):
         self.table = table
         self.s3_bucket = s3_bucket
         self.s3_key = s3_key
-        self.delimiter = delimiter
         self.ignore_headers = ignore_headers
         self.data_format = data_format
         self.date_format = date_format
@@ -63,7 +61,6 @@ class StageToRedshiftOperator(BaseOperator):
             aws_connection.login,
             aws_connection.password,
             self.ignore_headers,
-            self.delimiter,
             self.data_format,
             self.date_format,
         )

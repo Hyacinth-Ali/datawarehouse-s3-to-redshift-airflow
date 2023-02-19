@@ -24,7 +24,7 @@
 #
 # TO-DO: Update the following command with the URI and un-comment it:
 
-airflow connections add aws_credentials --conn-uri aws://AKIA4QHKFW7M43JA4BNG:u0P4h+6aTtCDQlIKbSSPp9xYdKitceBA3yyluq7k@/?region_name=us-east-1
+# airflow connections add aws_credentials --conn-uri ''
 #
 #
 # TO-DO: run the follwing command and observe the JSON output: 
@@ -50,7 +50,7 @@ airflow connections add aws_credentials --conn-uri aws://AKIA4QHKFW7M43JA4BNG:u0
 #
 # TO-DO: Update the following command with the URI and un-comment it:
 #
-airflow connections add redshift --conn-uri redshift://awsuser:R3dsh1ft@default.859484567513.us-east-1.redshift-serverless.amazonaws.com:5439/dev
+# airflow connections add redshift --conn-uri ''
 #
 # TO-DO: update the following bucket name to match the name of your S3 bucket and un-comment it:
 #
@@ -59,6 +59,3 @@ airflow variables set s3_bucket udacity-ali-m4
 # TO-DO: un-comment the below line:
 #
 airflow variables set s3_prefix data-pipelines
-
-git config --global user.email "hyacinth.ali@mail.mcgill.ca"
-git config --global user.name "Hyacinth Ali"  
