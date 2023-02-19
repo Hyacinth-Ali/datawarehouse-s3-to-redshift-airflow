@@ -12,7 +12,6 @@ class StageToRedshiftOperator(BaseOperator):
         FROM '{}'
         ACCESS_KEY_ID '{}'
         SECRET_ACCESS_KEY '{}'
-        IGNOREHEADER {}
         json '{}'
         dateformat '{}';
     """
@@ -24,7 +23,6 @@ class StageToRedshiftOperator(BaseOperator):
                  table='',
                  s3_bucket='',
                  s3_key='',
-                 ignore_headers=1,
                  data_format='auto',
                  date_format='auto',
                  *args, **kwargs):
@@ -37,7 +35,6 @@ class StageToRedshiftOperator(BaseOperator):
         self.table = table
         self.s3_bucket = s3_bucket
         self.s3_key = s3_key
-        self.ignore_headers = ignore_headers
         self.data_format = data_format
         self.date_format = date_format
 
@@ -60,7 +57,6 @@ class StageToRedshiftOperator(BaseOperator):
             s3_path,
             aws_connection.login,
             aws_connection.password,
-            self.ignore_headers,
             self.data_format,
             self.date_format,
         )
