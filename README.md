@@ -9,4 +9,12 @@ They have decided to bring in a data engineer into the project, whi is expected 
 
 The source data resides in S3 and needs to be processed in Sparkify's data warehouse in Amazon Redshift. The source datasets consist of JSON logs that tell about user activity in the application and JSON metadata about the songs the users listen to.
 
-To complete the project, the data engineer will need to create your custom operators to perform tasks such as staging the data, filling the data warehouse, and running checks on the data as the final step.
+To complete the project, the data engineer will need to create custom operators to perform tasks such as staging the data, filling the data warehouse, and running checks on the data as the final step.
+
+## Project Implementation
+The architecture of the ETL data pipelines with airflow is shown below:
+
+![Airflow Data Pipeline](https://user-images.githubusercontent.com/24963911/220159839-13405869-a618-4486-862d-96b513a317a2.png)
+
+The Airflow dags leverages exisitng Airflow operators, e.g., PostgresOperator, and Airflow hooks, e.g., PostgresHook, to facilitate the development of the data pipelines. In addition, the user defined resusable operators as well as the SQL statements modularizes the implemtation of the data pipelines to reduce complexity and promotes reusability of the sofdtware components, which can be reused in other Airflow data pipelines.
+
