@@ -14,7 +14,7 @@ To complete the project, the data engineer will need to create custom operators 
 ## Project Implementation
 The architecture of the ETL data pipelines with airflow is shown below:
 
-![Airflow Data Pipeline](https://user-images.githubusercontent.com/24963911/220159839-13405869-a618-4486-862d-96b513a317a2.png)
+![Airflow Data Pipeline](https://user-images.githubusercontent.com/24963911/220166114-a55b0668-859d-4d55-925f-180ad0df1958.png)
 
 The Airflow dags leverage exisitng Airflow operators, e.g., PostgresOperator, and Airflow hooks, e.g., PostgresHook, to facilitate the development of the data pipelines. In addition, the user defined resusable operators as well as the SQL statements modularizes the implemtation of the data pipelines to reduce complexity and promotes reusability of the sofdtware components, which can be reused in other Airflow data pipelines.
 
