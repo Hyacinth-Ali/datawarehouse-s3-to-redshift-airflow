@@ -18,3 +18,6 @@ The architecture of the ETL data pipelines with airflow is shown below:
 
 The Airflow dags leverage exisitng Airflow operators, e.g., PostgresOperator, and Airflow hooks, e.g., PostgresHook, to facilitate the development of the data pipelines. In addition, the user defined resusable operators as well as the SQL statements modularizes the implemtation of the data pipelines to reduce complexity and promotes reusability of the sofdtware components, which can be reused in other Airflow data pipelines.
 
+Below is an image of the Aiflow UI after a succesful Dag run. Note the create table tasks creates a table if the table doesn't exist.
+![Airflow UI](https://user-images.githubusercontent.com/24963911/220166569-a5b01978-5a4f-4732-8b1b-1f9d07e9fb9a.png)
+
